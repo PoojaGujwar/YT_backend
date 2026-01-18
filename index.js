@@ -11,7 +11,7 @@ const PORT = 4000;
 initializeDatabase();
 
 app.use(cors({
-  origin: "http://localhost:3000", 
+  origin: "https://yt-frontend-jade.vercel.app", 
   credentials: true              
 }));
 
