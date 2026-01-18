@@ -8,7 +8,7 @@ const router = express.Router();
 const oauth2Client = new google.auth.OAuth2(
   process.env.CLIENT_ID,
   process.env.CLIENT_SECRET,
-  `http://localhost:${process.env.PORT}/auth/google/callback`
+  `https://yt-frontend-jade.vercel.app/auth/google/callback`
 );
 
 router.get("/auth/google", (req, res) => {
@@ -35,7 +35,7 @@ router.get("/auth/google/callback", async (req, res) => {
     httpOnly: true
   });
 
-  res.redirect("http://localhost:3000/dashboard");
+  res.redirect("https://yt-frontend-jade.vercel.app/dashboard");
 });
 
 router.get("/videos", async (req, res) => {
